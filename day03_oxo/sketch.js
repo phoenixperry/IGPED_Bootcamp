@@ -1,18 +1,18 @@
+var pieces =[];
+var turn = "O";
 function GamePiece(name, position, size) {
     this.name = name;
     this.position = position;//make sure to pass in width as x and height as y
     this.size = size;
 }
+
 GamePiece.prototype.display = function(color){
 
   var over = false; //this just changes if the user is over the mouse
-  if(mouseX > this.position.x && mouseX < this.position.x+this.size.x && mouseY > this.position.y && mouseY< this.position.y+this.size.y) //this logic test if the player is over the button
+  if(mouseX > this.position.x && mouseX < this.position.x+this.size.x && mouseY > this.position.y && mouseY< this.position.y+this.size.y && mouseIsPressed) //this logic test if the player is over the button
   {
-    fill(color, 255);//if so, you can color it
-    over = true;  // set the over var to true  b/c we're over the btn
-  }else{
-     fill(color);
-     over = false;
+    name = turn;
+
   }
 //  console.log(over);
   //draw the btn
@@ -23,18 +23,28 @@ GamePiece.prototype.display = function(color){
   textAlign(CENTER, CENTER);
   //what do I print?
   text(this.name,this.position.x,this.position.y, this.size.x, this.size.y);
-  return over; //this uses this idea of returning a var out of a function
+
 };
-var piece1;
 function setup(){
   createCanvas(windowWidth,windowHeight);
-  var position = createVector(0,0);
-  var size = createVector(300,300);
-  piece1 = new GamePiece("x", position,size);
+for(var i = 0; i < 3; i++)
+{
+    var position = createVector((width/3)*i,(height/3)*i);
+    var size = createVector((width/3),(height/3));
+    var piece = new GamePiece(" ",position,size);
+}
+
+
+
 }
 function draw(){
   var c = color(255,0,0);
-  piece1.display(c)
+  for(var i = 0; i < 3; i++)
+{
+  
+}
+
+
 }
 
 
