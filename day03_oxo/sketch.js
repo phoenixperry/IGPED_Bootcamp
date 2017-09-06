@@ -1,17 +1,24 @@
 var pieces =[];
-var turn = "O";
+var turn = ["O","X"];
 var numPieces = 3;
-function GamePiece(name, position, size) {
+//winstates
+ var winStates = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+
+function GamePiece(name, position, size, id) {
     this.name = name;
     this.position = position;//make sure to pass in width as x and height as y
     this.size = size;
+    this.id = id;
 }
 
 GamePiece.prototype.display = function(c){
 
   if(mouseX > this.position.x && mouseX < this.position.x+this.size.x && mouseY > this.position.y && mouseY< this.position.y+this.size.y && mouseIsPressed) //this logic test if the player is over the button
   {
-    this.name = turn;
+    if(this.name===" "){
+      turn = turn.splice(1).concat(turn);
+      this.name = turn[0];
+    }
   }
   fill(c);
   rect(this.position.x,this.position.y,this.size.x,this.size.y);
@@ -26,21 +33,31 @@ GamePiece.prototype.display = function(c){
 };
 function setup(){
   createCanvas(windowWidth,windowHeight);
-for(var i = 0; i < numPieces; i++)
+for(var j = 0; j < numPieces; j++)
 {
-    var position = createVector((width/3)*i,(height/3));
-    var size = createVector((width/3),(height/3));
-    var piece = new GamePiece(" ",position,size);
-    pieces.push(piece);
+  for(var i = 0; i < numPieces; i++)
+  {
+      var position = createVector((width/numPieces)*i,(height/numPieces)*j);
+      var size = createVector((width/3),(height/3));
+      var id = pieces.length;
+      var piece = new GamePiece(" ",position,size,id);
+      console.log(piece.id);
+      pieces.push(piece);
+  }
 }
-
 }
 function draw(){
   var c = color(255,0,0);
-  for(var i = 0; i < pieces.length; i++)
-{
-  pieces[i].display(c);
-}
+
+    for(var i = 0; i < pieces.length; i++)
+    {
+      pieces[i].display(c);
+    }
+
+  if(pieces[winStates[0][0]].name==="X" && pieces[winStates[0][1]].name==="X" &&
+    pieces[winStates[0][2]].name==="X"){
+    console.log("you win");
+  }
 
 
 }
