@@ -1,9 +1,4 @@
-/*
-Grid packing example for teaching for loops and introducting HSB colorMode
-Author: Phoenix Perry
-Code Liberation
-Created: 22-07-17
-*/
+
 var boxes = [];
 var boxSize = 5;
 function setup(){
