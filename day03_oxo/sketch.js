@@ -41,7 +41,7 @@ for(var j = 0; j < numPieces; j++)
       var size = createVector((width/3),(height/3));
       var id = pieces.length;
       var piece = new GamePiece(" ",position,size,id);
-      console.log(piece.id);
+    //  console.log(piece.id);
       pieces.push(piece);
   }
 }
@@ -53,10 +53,12 @@ function draw(){
     {
       pieces[i].display(c);
     }
+// var winStates = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+ console.log(winStates.length);
 
   if(pieces[winStates[0][0]].name==="X" && pieces[winStates[0][1]].name==="X" &&
     pieces[winStates[0][2]].name==="X"){
-    console.log("you win");
+  //  console.log("you win");
   }
 
 
