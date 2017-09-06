@@ -1,47 +1,45 @@
 var pieces =[];
 var turn = "O";
+var numPieces = 3;
 function GamePiece(name, position, size) {
     this.name = name;
     this.position = position;//make sure to pass in width as x and height as y
     this.size = size;
 }
 
-GamePiece.prototype.display = function(color){
+GamePiece.prototype.display = function(c){
 
-  var over = false; //this just changes if the user is over the mouse
   if(mouseX > this.position.x && mouseX < this.position.x+this.size.x && mouseY > this.position.y && mouseY< this.position.y+this.size.y && mouseIsPressed) //this logic test if the player is over the button
   {
-    name = turn;
-
+    this.name = turn;
   }
-//  console.log(over);
-  //draw the btn
+  fill(c);
   rect(this.position.x,this.position.y,this.size.x,this.size.y);
+
   fill(255);
   // add the text
   textSize(50);
   textAlign(CENTER, CENTER);
-  //what do I print?
+
   text(this.name,this.position.x,this.position.y, this.size.x, this.size.y);
 
 };
 function setup(){
   createCanvas(windowWidth,windowHeight);
-for(var i = 0; i < 3; i++)
+for(var i = 0; i < numPieces; i++)
 {
-    var position = createVector((width/3)*i,(height/3)*i);
+    var position = createVector((width/3)*i,(height/3));
     var size = createVector((width/3),(height/3));
     var piece = new GamePiece(" ",position,size);
+    pieces.push(piece);
 }
-
-
 
 }
 function draw(){
   var c = color(255,0,0);
-  for(var i = 0; i < 3; i++)
+  for(var i = 0; i < pieces.length; i++)
 {
-  
+  pieces[i].display(c);
 }
 
 
