@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "week01_SpaceShooter.CSharp", "week01_SpaceShooter.CSharp.csproj", "{319FE8E8-E44F-60BE-9204-849155F3879A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{319FE8E8-E44F-60BE-9204-849155F3879A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319FE8E8-E44F-60BE-9204-849155F3879A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319FE8E8-E44F-60BE-9204-849155F3879A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319FE8E8-E44F-60BE-9204-849155F3879A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
