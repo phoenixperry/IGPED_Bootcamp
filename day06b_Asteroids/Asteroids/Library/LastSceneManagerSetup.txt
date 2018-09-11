@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/AsteroidsExample/Scenes/AsteroidsMain.unity
+  isLoaded: 1
+  isActive: 1
