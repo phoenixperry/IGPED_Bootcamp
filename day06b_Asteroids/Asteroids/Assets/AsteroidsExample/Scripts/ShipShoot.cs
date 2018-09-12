@@ -17,6 +17,7 @@ public class ShipShoot : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(key))
         {
+            //GetComponent<AudioSource>().Play();
             Transform b = Instantiate (bullet, transform);
             b.GetComponent<BulletHit>().scoreSystem = _scoreSystem;
         }

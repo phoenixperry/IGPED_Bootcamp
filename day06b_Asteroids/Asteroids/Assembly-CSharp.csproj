@@ -70,6 +70,7 @@
     <Compile Include="Assets\AsteroidsExample\Scripts\ShipRotate.cs" />
     <Compile Include="Assets\AsteroidsExample\Scripts\ShipShoot.cs" />
     <Compile Include="Assets\AsteroidsExample\Scripts\ShipThrust.cs" />
+    <Compile Include="Assets\AsteroidsExample\Scripts\StartGame.cs" />
     <Compile Include="Assets\AsteroidsExample\Scripts\WorldWrap.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -157,17 +158,17 @@
     <None Include="Assets\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
     <None Include="Assets\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
     <None Include="Assets\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
-    <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/kurai/Projects/Unity/TeachingExamples/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/kurai/Projects/Unity/TeachingExamples/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/kurai/Projects/IGPED_bootcamp/IGPED_Bootcamp/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/kurai/Projects/Unity/TeachingExamples/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/kurai/Projects/IGPED_bootcamp/IGPED_Bootcamp/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/kurai/Projects/Unity/TeachingExamples/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/kurai/Projects/IGPED_bootcamp/IGPED_Bootcamp/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.StandardEvents">
+      <HintPath>/Users/kurai/Projects/IGPED_bootcamp/IGPED_Bootcamp/day06b_Asteroids/Asteroids/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Hub/Editor/2018.2.6f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

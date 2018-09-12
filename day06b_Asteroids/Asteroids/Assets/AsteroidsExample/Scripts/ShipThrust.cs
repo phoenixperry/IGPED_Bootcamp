@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
+
 public class ShipThrust : MonoBehaviour {
     public float thrustSpeed;
     [Header ("Thrust Sprites")]

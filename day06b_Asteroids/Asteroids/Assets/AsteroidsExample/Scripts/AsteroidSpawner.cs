@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AsteroidSpawner : MonoBehaviour {
     public Transform asteroid;
+    public Transform spawner;
     public float spawnTime = 1f;
     private float _angle;
     private Vector2 _screenBounds;
@@ -32,7 +33,11 @@ public class AsteroidSpawner : MonoBehaviour {
     void SpawnAsteroid()
     {
         _angle = Random.Range(0f, 360f);
-        transform.position = new Vector2((_screenBounds.x) * Mathf.Cos(_angle), (_screenBounds.y) * Mathf.Sin(_angle));
-        Instantiate(asteroid, transform);
+        spawner.transform.position = new Vector2((_screenBounds.x) * Mathf.Cos(_angle), (_screenBounds.y) * Mathf.Sin(_angle));
+        //the asteroid is initially added as a parent of the AsteroidManager
+        Transform a = Instantiate(asteroid, transform);
+        //and it's immediately placed on the position and rotation of the spawner.
+        a.position = spawner.position;
+        a.rotation = spawner.rotation;
     }
 }

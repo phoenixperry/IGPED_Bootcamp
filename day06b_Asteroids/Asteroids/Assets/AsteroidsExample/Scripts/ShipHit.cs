@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class ShipHit : MonoBehaviour {
     public int lives = 3;
     public Text livesUI;
-
     void Start()
     {
         
@@ -17,6 +17,7 @@ public class ShipHit : MonoBehaviour {
         if (lives==0)
         {
             //add gameover here!
+            SceneManager.LoadScene(0);
         }
         else
         {
